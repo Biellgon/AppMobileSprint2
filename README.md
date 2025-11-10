@@ -1,9 +1,35 @@
-🚀 FIAP Connect - Squad Builder (MVP - Sprint 1)O FIAP Connect é uma plataforma de matchmaking desenvolvida para otimizar a formação de grupos de projetos acadêmicos, transformando o tempo gasto na "caça ao integrante" em energia criativa para o desenvolvimento de soluções inovadoras. O foco é fornecer transparência e ferramentas de filtro inteligentes para que os alunos encontrem colegas com habilidades e preferências complementares.Este repositório contém o código-fonte do Aplicativo Mobile (Front-end), desenvolvido como Produto Mínimo Viável (MVP) da Sprint 1.🌟 Destaques do MVP (Sprint 1)O MVP foca no fluxo de usuário essencial e na interface de coleta de dados:Identidade Visual: Design Dark Mode coeso, baseado na identidade da FIAP, com cores de destaque em Magenta (#F23064).Fluxo de Autenticação: Tela de Splash com timeout de 5 segundos, seguida de uma tela de Login funcional.Gestão de Perfil: Páginas dedicadas para visualização do Perfil e edição de Configurações de Conta.Formulário Central (Matchmaking): Página Competências para o Matchmaking (skillssetuppage.tsx) com seleção de skills via tags de toggle (alternância de estado) e campo de descrição.Busca Funcional: Página de Busca (searchpage.tsx) com campos de filtro e uma lista de resultados, simulando a navegação para um grupo detalhado ("Conexão Anjo").🛠️ Tecnologias UtilizadasCategoriaTecnologiaVersão/UsoLinguagem PrincipalTypeScript / JavaScriptLógica de Front-end e TipagemFront-end / MobileReact NativeDesenvolvimento Cross-platform (iOS/Android)AmbienteExpo / Expo RouterGerenciamento de projeto e Rotas (File-based routing)EstilosReact Native StyleSheetImplementação do Flexbox e do design Dark ModeLógica CentralC# / .NET (Back-end)(Planejado para Sprint 2) Lógica do Algoritmo de Matchmaking⚙️ Como Rodar o Projeto LocalmenteSiga estas instruções para configurar e executar o aplicativo em seu emulador ou dispositivo.Pré-requisitosVocê precisa ter o Node.js (LTS) e o Expo CLI instalados globalmente.Bash# Instalar a CLI do Expo se você ainda não tem
-npm install -g expo-cli
-InstalaçãoClone o repositório:Bashgit clone https://www.dio.me/articles/enviando-seu-projeto-para-o-github
-cd FIAPConnectApp/AppMobile
-Instale as dependências:Bashnpm install
-ExecuçãoInicie o servidor de desenvolvimento:Bashnpm start
-Abra o App:Emulador: Pressione a (Android) ou i (iOS) no terminal.Dispositivo: Escaneie o código QR exibido no terminal usando o aplicativo Expo Go em seu celular.
-🧭 Rotas de Navegação (Expo Router)O aplicativo utiliza roteamento baseado em arquivos. As rotas principais são:Arquivo (app/)Rota de NavegaçãoPropósitoindex.tsx/ (Redirecionador)Redireciona para /Inicio.Inicio.tsx/InicioTela de Splash (5 segundos de timeout).login.tsx/loginTela de Login (Acesso ao sistema).dashboard.tsx/dashboardTela principal (acesso rápido e notificações).profilepage.tsx/profilepagePerfil do Aluno (Visualização de dados).accountsettingspage.tsx/accountsettingspageConfigurações de Conta (Campos editáveis, privacidade).skillssetuppage.tsx/skillssetuppageSeleção de Competências e Habilidades.searchpage.tsx/searchpageFiltros e Lista de Alunos/Grupos (Matchmaking).
-🧪 Dados de TestePara simular o fluxo de Login com sucesso (que leva ao Dashboard):CampoValorRA / Usuário123Senhafiap
+# 🚀 FiapConnectApp
+
+Aplicativo mobile desenvolvido como parte do **Challenge FIAP - Oracle (2TDSQ)**, com o objetivo de conectar alunos e facilitar a **formação de grupos acadêmicos** com base em **habilidades, interesses e compatibilidade**.
+
+O projeto é composto por **duas camadas**:
+- 📱 **AppMobile** – desenvolvido em **React Native (Expo)**  
+- ⚙️ **Api** – desenvolvida em **C# (.NET 8 Web API)** com integração REST
+
+---
+
+## 📚 Sumário
+- [🎯 Objetivo](#-objetivo)
+- [🧱 Estrutura do Projeto](#-estrutura-do-projeto)
+- [⚙️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🧩 Configuração do Ambiente](#-configuração-do-ambiente)
+- [🧠 Como Executar o Projeto](#-como-executar-o-projeto)
+- [🌐 Rotas da API](#-rotas-da-api)
+- [👥 Integrantes](#-integrantes)
+
+---
+
+## 🎯 Objetivo
+
+O **FiapConnect** busca otimizar a experiência de alunos na **formação e gestão de grupos de trabalho acadêmico**, permitindo encontrar colegas com **skills complementares** e interesses similares.  
+
+Além disso, oferece funcionalidades como:
+- Criação e visualização de grupos existentes;  
+- Busca por habilidades específicas;  
+- Sistema de mensagens entre usuários;  
+- Integração com base de dados Oracle (via API REST).  
+
+---
+
+## 🧱 Estrutura do Projeto
+
